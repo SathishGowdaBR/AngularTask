@@ -1,0 +1,20 @@
+.tablebtncust{
+    float: left;
+}
+table, th, td { 
+    border: 1px solid black; 
+    border-collapse: collapse; 
+} 
+th, td { 
+    padding: 20px; 
+} 
+.imgcustdata{
+    width: 30%;
+    float:left;
+}
+.pagcust{
+    float: right;
+}
+.firstth{
+    width:10%;
+}

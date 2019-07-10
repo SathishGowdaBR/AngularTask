@@ -1,0 +1,38 @@
+<div class="content">
+<div class="row content">
+  <div>
+  </div>       
+</div>
+<div class="row content">
+  <button (click)="adddata()" class="btn btn-info tablebtncust">Add Expense</button>
+</div>
+  <div class="row content">
+    <table style="width:100%"> 
+      <tr> 
+        <th class="firstth"></th>
+        <th>Category</th> 
+        <th>Item Name</th>  
+        <th>Amount</th> 
+        <th>Expense Date</th> 
+      </tr> 
+      <tr *ngIf="isEditable">
+        <td><img class="imgcustdata" src="../../assets/iconfinder_new-24_103173.png"></td>
+        <td contenteditable='true'></td>
+        <td contenteditable='true'></td>
+        <td contenteditable='true'></td>
+        <td contenteditable='true'></td>
+        <td *ngIf="Isupdate" ><button (click)="updateingt()" class="btn btn-info">Update</button></td>
+      </tr>
+      
+      <tr *ngFor="let item of collection.data| paginate: config ; let i = index" > 
+        <td><img (click)="editingt(i,item.value)" class="imgcustdata" src="../../assets/iconfinder_new-24_103173.png"></td>
+        <td contenteditable='true'>{{item.value.CategoriesName}}</td>
+        <td contenteditable='true'>{{item.value.itemName}}</td>
+        <td contenteditable='true'>{{item.value.amount}}</td>
+        <td contenteditable='true'>{{item.value.Expense_date}}</td>
+      </tr> 
+    </table> 
+    <span class="pagcust"><pagination-controls (pageChange)="pageChanged($event)"></pagination-controls></span>
+  </div>
+</div>
+

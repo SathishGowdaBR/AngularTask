@@ -1,0 +1,10 @@
+.listcustom{
+    padding: 1px solid black;
+    margin:auto;
+    width: auto;
+    text-align: left;
+}
+.custimg{
+   width: 3%;
+   float:right;
+}
